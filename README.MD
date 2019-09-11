@@ -5,12 +5,14 @@
 - As resoluções devem estar em arquivos diferentes para cada exercício.
 - Utilizem o arquivo SimpleCalc.g4
 
-``grammar SimpleCalc;``
-``expr : term ( ( '+' | '-' ) term )* ';' ;``
-``term : number ;``
-``number  : DIGIT+ ;``
-``DIGIT : '0'..'9' ;``
-``WHITESPACE : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ -> channel(HIDDEN);``
+```
+grammar SimpleCalc;
+expr : term ( ( '+' | '-' ) term )* ';' ;
+term : number ;
+number  : DIGIT+ ;
+DIGIT : '0'..'9' ;
+WHITESPACE : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ -> channel(HIDDEN);
+```
 
 ### Exercício 1
 - Estender a gramática exemplo para reconhecer também operações de multiplicação e divisão.
@@ -20,9 +22,11 @@
 - Estender a gramática do exercício 1 para oferecer suporte a variáveis.
 - Exemplo:
 
-``a + 1 - b;``
-``b - a * 4;``
-``3 / 1 + b;``
+```
+a + 1 - b;
+b - a * 4;
+3 / 1 + b;
+```
 
 ### Exercício 3
 - Estender a gramática do exercício 2 para que reconheça comandos de atribuição.
