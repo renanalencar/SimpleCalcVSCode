@@ -6,7 +6,7 @@
 - Utilizem o arquivo SimpleCalc.g4
 
 ``
-grammar SimpleCalc;
+grammar SimpleCalc; <br />
 expr : term ( ( '+' | '-' ) term )* ';' ;
 term : number ;
 number  : DIGIT+ ;
