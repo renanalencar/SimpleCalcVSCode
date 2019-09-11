@@ -5,15 +5,14 @@
 - As resoluções devem estar em arquivos diferentes para cada exercício.
 - Utilizem o arquivo SimpleCalc.g4
 
-`
+``
 grammar SimpleCalc;
 expr : term ( ( '+' | '-' ) term )* ';' ;
 term : number ;
 number  : DIGIT+ ;	
 DIGIT : '0'..'9' ;
 WHITESPACE : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ -> channel(HIDDEN);
-
-`
+``
 
 ### Exercício 1
 - Estender a gramática exemplo para reconhecer também operações de multiplicação e divisão.
